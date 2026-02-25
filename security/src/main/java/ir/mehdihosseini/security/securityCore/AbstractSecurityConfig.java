@@ -32,15 +32,12 @@ public class AbstractSecurityConfig {
         String[] listUrls;
         if (!permitAll.isEmpty()) {
             listUrls
-                    = (String[]) permitAll.stream().map(x -> x.urlComplete).toArray();
+                    = permitAll.stream().map(x -> x.getContextPath() + x.getEndpoint()).toList().toArray(new String[permitAll.size()]);
         } else {
             listUrls = null;
         }
         return security.csrf().disable()
                 .httpBasic(Customizer.withDefaults())
-                .authorizeHttpRequests(http -> http.requestMatchers("/admin/**")
-                        .permitAll()
-                        .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 //                .exceptionHandling(ex -> )
                 .build();

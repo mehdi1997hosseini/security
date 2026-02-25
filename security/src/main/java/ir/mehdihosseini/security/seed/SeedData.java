@@ -6,16 +6,14 @@ import ir.mehdihosseini.security.urlApp.UrlAppEntity;
 import ir.mehdihosseini.security.urlApp.repository.UrlAppRepository;
 import ir.mehdihosseini.security.userDetail.UserDetailEntity;
 import ir.mehdihosseini.security.userDetail.repository.UserDetailRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.core.annotation.Order;
+import jakarta.annotation.PostConstruct;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
 @Component
-@Order(value = 0)
-public class SeedData implements CommandLineRunner {
+public class SeedData {
 
     private final RoleRepository roleRepository;
     private final UrlAppRepository urlAppRepository;
@@ -30,9 +28,8 @@ public class SeedData implements CommandLineRunner {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-
+    @PostConstruct
+    void init() {
         RoleEntity roleEntity1 = new RoleEntity();
         roleEntity1.setTitle("manager");
         roleEntity1.setRoleName("SUPER_ADMIN");
@@ -48,11 +45,16 @@ public class SeedData implements CommandLineRunner {
         UrlAppEntity urlApp1 = new UrlAppEntity();
         urlApp1.setTitle("swagger");
         urlApp1.setContextPath("/swagger/");
-        urlApp1.setPath("**");
+        urlApp1.setEndpoint("**");
         urlApp1.setPermitAll(true);
         UrlAppEntity saveUrlApp1 = urlAppRepository.save(urlApp1);
 
-
+        UrlAppEntity urlApp2 = new UrlAppEntity();
+        urlApp2.setTitle("h2-db");
+        urlApp2.setContextPath("/h2/");
+        urlApp2.setEndpoint("**");
+        urlApp2.setPermitAll(true);
+        UrlAppEntity saveUrlApp2 = urlAppRepository.save(urlApp2);
     }
 
 }

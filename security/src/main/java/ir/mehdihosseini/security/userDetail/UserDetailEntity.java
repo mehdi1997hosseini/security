@@ -29,7 +29,7 @@ public class UserDetailEntity extends BasicAuditEntity<String> implements UserDe
     @Column(nullable = false)
     private String password;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "TBL_USER_ROLES",
             joinColumns = @JoinColumn(name = "user_id"),

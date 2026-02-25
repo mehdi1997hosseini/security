@@ -38,5 +38,10 @@ public class AdminControllerImpl implements AdminController {
         return new ResponseEntity<>(urlsService.addUrl(dto), HttpStatus.CREATED);
     }
 
+    @Override
+    public ResponseEntity<?> findAllUserSystem() {
+        return new ResponseEntity<>(service.findAllUserSystem(), HttpStatus.OK);
+    }
+
 
 }

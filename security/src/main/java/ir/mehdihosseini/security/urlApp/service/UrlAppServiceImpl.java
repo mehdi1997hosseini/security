@@ -28,7 +28,7 @@ public class UrlAppServiceImpl extends AbstractEntityService<UrlAppEntity, Strin
         UrlAppEntity urlApp = new UrlAppEntity();
         urlApp.setPermitAll(add.permitAll());
         urlApp.setTitle(add.title());
-        urlApp.setPath(add.path());
+        urlApp.setEndpoint(add.path());
         urlApp.setContextPath(add.contextPath());
         save(urlApp);
 

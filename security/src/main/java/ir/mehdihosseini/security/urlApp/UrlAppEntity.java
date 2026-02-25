@@ -16,9 +16,7 @@ public class UrlAppEntity extends BasicEntity<String> {
 
     private boolean permitAll = false;
     private String title;
-    private String path;
+    private String endpoint;
     private String contextPath;
-
-    public transient String urlComplete = contextPath + path ;
 
 }

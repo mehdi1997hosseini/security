@@ -6,6 +6,7 @@ import ir.mehdihosseini.security.userDetail.UserDetailEntity;
 import ir.mehdihosseini.security.userDetail.dto.LoginUserDto;
 import ir.mehdihosseini.security.userDetail.dto.RemoveUserDto;
 import ir.mehdihosseini.security.userDetail.dto.SignupUserDto;
+import ir.mehdihosseini.security.userDetail.dto.UserSystemDto;
 import ir.mehdihosseini.security.userDetail.repository.UserDetailRepository;
 import org.hibernate.query.IllegalSelectQueryException;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,6 +15,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserAuthServiceImpl extends AbstractAuditingService<UserDetailEntity, String, UserDetailRepository>
@@ -45,6 +48,14 @@ public class UserAuthServiceImpl extends AbstractAuditingService<UserDetailEntit
         repository.save(userDetail);
 
         return "successFull";
+    }
+
+    @Override
+    public List<UserSystemDto> findAllUserSystem() {
+        return repository.findAll().stream().filter(x -> x.isEnabled()
+                && x.isAccountNonExpired()
+                && !x.getIsDelete())
+                .map(e -> new UserSystemDto(e.getUsername(),e.getPassword())).toList();
     }
 
     @Override
