@@ -1,7 +1,7 @@
-package ir.mehdihosseini.security.roles.repository;
+package ir.mehdihosseini.security.role.repository;
 
 import ir.mehdihosseini.security.core.repository.BasicRepository;
-import ir.mehdihosseini.security.roles.RoleEntity;
+import ir.mehdihosseini.security.role.RoleEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository

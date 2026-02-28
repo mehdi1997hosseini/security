@@ -1,4 +1,4 @@
-package ir.mehdihosseini.security.roles.dto;
+package ir.mehdihosseini.security.role.dto;
 
 import java.io.Serializable;
 

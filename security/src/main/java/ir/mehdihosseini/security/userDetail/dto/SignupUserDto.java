@@ -1,6 +1,6 @@
 package ir.mehdihosseini.security.userDetail.dto;
 
-import ir.mehdihosseini.security.roles.RoleEntity;
+import ir.mehdihosseini.security.role.RoleEntity;
 
 import java.io.Serializable;
 import java.util.Set;

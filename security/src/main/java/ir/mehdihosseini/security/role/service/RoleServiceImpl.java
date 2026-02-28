@@ -1,8 +1,8 @@
-package ir.mehdihosseini.security.roles.service;
+package ir.mehdihosseini.security.role.service;
 
 import ir.mehdihosseini.security.core.service.AbstractEntityService;
-import ir.mehdihosseini.security.roles.RoleEntity;
-import ir.mehdihosseini.security.roles.repository.RoleRepository;
+import ir.mehdihosseini.security.role.RoleEntity;
+import ir.mehdihosseini.security.role.repository.RoleRepository;
 import org.springframework.stereotype.Service;
 
 @Service

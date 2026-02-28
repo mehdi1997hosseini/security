@@ -1,7 +1,7 @@
 package ir.mehdihosseini.security.securityCore;
 
-import ir.mehdihosseini.security.urlApp.UrlAppEntity;
-import ir.mehdihosseini.security.urlApp.service.AccessibilityUrlService;
+import ir.mehdihosseini.security.url.UrlAppEntity;
+import ir.mehdihosseini.security.url.service.AccessibilityUrlService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

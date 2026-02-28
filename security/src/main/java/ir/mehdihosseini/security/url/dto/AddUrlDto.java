@@ -1,4 +1,4 @@
-package ir.mehdihosseini.security.urlApp.dto;
+package ir.mehdihosseini.security.url.dto;
 
 import org.springframework.boot.context.properties.bind.DefaultValue;
 

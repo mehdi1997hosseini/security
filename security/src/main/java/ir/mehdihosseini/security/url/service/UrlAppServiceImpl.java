@@ -1,10 +1,10 @@
-package ir.mehdihosseini.security.urlApp.service;
+package ir.mehdihosseini.security.url.service;
 
 import ir.mehdihosseini.security.core.service.AbstractEntityService;
 import ir.mehdihosseini.security.core.service.entity.BasicEntityService;
-import ir.mehdihosseini.security.urlApp.UrlAppEntity;
-import ir.mehdihosseini.security.urlApp.dto.AddUrlDto;
-import ir.mehdihosseini.security.urlApp.repository.UrlAppRepository;
+import ir.mehdihosseini.security.url.UrlAppEntity;
+import ir.mehdihosseini.security.url.dto.AddUrlDto;
+import ir.mehdihosseini.security.url.repository.UrlAppRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

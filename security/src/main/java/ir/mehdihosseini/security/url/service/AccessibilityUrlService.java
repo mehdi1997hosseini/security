@@ -1,6 +1,6 @@
-package ir.mehdihosseini.security.urlApp.service;
+package ir.mehdihosseini.security.url.service;
 
-import ir.mehdihosseini.security.urlApp.UrlAppEntity;
+import ir.mehdihosseini.security.url.UrlAppEntity;
 
 import java.util.List;
 

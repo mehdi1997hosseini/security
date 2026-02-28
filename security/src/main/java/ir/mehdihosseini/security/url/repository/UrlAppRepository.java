@@ -1,7 +1,7 @@
-package ir.mehdihosseini.security.urlApp.repository;
+package ir.mehdihosseini.security.url.repository;
 
 import ir.mehdihosseini.security.core.repository.BasicRepository;
-import ir.mehdihosseini.security.urlApp.UrlAppEntity;
+import ir.mehdihosseini.security.url.UrlAppEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

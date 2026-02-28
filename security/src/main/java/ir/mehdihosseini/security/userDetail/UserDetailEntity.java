@@ -1,7 +1,7 @@
 package ir.mehdihosseini.security.userDetail;
 
 import ir.mehdihosseini.security.core.entity.audit.BasicAuditEntity;
-import ir.mehdihosseini.security.roles.RoleEntity;
+import ir.mehdihosseini.security.role.RoleEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

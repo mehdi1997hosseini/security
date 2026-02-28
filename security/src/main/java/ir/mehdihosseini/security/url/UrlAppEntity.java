@@ -1,6 +1,7 @@
-package ir.mehdihosseini.security.urlApp;
+package ir.mehdihosseini.security.url;
 
 import ir.mehdihosseini.security.core.entity.BasicEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -15,6 +16,7 @@ import lombok.*;
 public class UrlAppEntity extends BasicEntity<String> {
 
     private boolean permitAll = false;
+    @Column(unique = true)
     private String title;
     private String endpoint;
     private String contextPath;
